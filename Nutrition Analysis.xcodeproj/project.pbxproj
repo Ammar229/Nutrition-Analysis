@@ -3,18 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		A08FA01626B6CA7700C99E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA01526B6CA7700C99E7C /* AppDelegate.swift */; };
 		A08FA01826B6CA7700C99E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA01726B6CA7700C99E7C /* SceneDelegate.swift */; };
-		A08FA01A26B6CA7700C99E7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA01926B6CA7700C99E7C /* ViewController.swift */; };
-		A08FA01D26B6CA7700C99E7C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08FA01B26B6CA7700C99E7C /* Main.storyboard */; };
 		A08FA01F26B6CA7800C99E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A08FA01E26B6CA7800C99E7C /* Assets.xcassets */; };
 		A08FA02226B6CA7800C99E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08FA02026B6CA7800C99E7C /* LaunchScreen.storyboard */; };
 		A08FA02D26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA02C26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift */; };
 		A08FA03826B6CA7900C99E7C /* Nutrition_AnalysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA03726B6CA7900C99E7C /* Nutrition_AnalysisUITests.swift */; };
+		A08FA05426B81E4900C99E7C /* AnalyzeIngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA05226B81E4900C99E7C /* AnalyzeIngredientsVC.swift */; };
+		A08FA05526B81E4900C99E7C /* AnalyzeIngredientsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FA05326B81E4900C99E7C /* AnalyzeIngredientsVC.xib */; };
+		A08FA05726B833CF00C99E7C /* AnalyzeIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA05626B833CF00C99E7C /* AnalyzeIngredientsViewModel.swift */; };
+		A08FA05B26B876D800C99E7C /* CustomTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA05A26B876D800C99E7C /* CustomTextView.swift */; };
+		A090923626BAB0DE0020ABCE /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = A090923526BAB0DE0020ABCE /* AppCoordinator.swift */; };
 		AD9D4B807D8CF555FE2064C4 /* Pods_Nutrition_AnalysisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BC7F425837CDAA49E5A15EC1 /* Pods_Nutrition_AnalysisTests.framework */; };
 		F722DB69F835F0DFF72F7604 /* Pods_Nutrition_Analysis.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F6E21B07DE7861F64C7FA4A /* Pods_Nutrition_Analysis.framework */; };
 		F83CB2785427F39FB9541FFE /* Pods_Nutrition_Analysis_Nutrition_AnalysisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BBA399893E28999C14A7F19 /* Pods_Nutrition_Analysis_Nutrition_AnalysisUITests.framework */; };
@@ -48,8 +51,6 @@
 		A08FA01226B6CA7700C99E7C /* Nutrition Analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition Analysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08FA01526B6CA7700C99E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08FA01726B6CA7700C99E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A08FA01926B6CA7700C99E7C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A08FA01C26B6CA7700C99E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A08FA01E26B6CA7800C99E7C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A08FA02126B6CA7800C99E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A08FA02326B6CA7800C99E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -59,6 +60,11 @@
 		A08FA03326B6CA7900C99E7C /* Nutrition AnalysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrition AnalysisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08FA03726B6CA7900C99E7C /* Nutrition_AnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition_AnalysisUITests.swift; sourceTree = "<group>"; };
 		A08FA03926B6CA7900C99E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A08FA05226B81E4900C99E7C /* AnalyzeIngredientsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeIngredientsVC.swift; sourceTree = "<group>"; };
+		A08FA05326B81E4900C99E7C /* AnalyzeIngredientsVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnalyzeIngredientsVC.xib; sourceTree = "<group>"; };
+		A08FA05626B833CF00C99E7C /* AnalyzeIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeIngredientsViewModel.swift; sourceTree = "<group>"; };
+		A08FA05A26B876D800C99E7C /* CustomTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextView.swift; sourceTree = "<group>"; };
+		A090923526BAB0DE0020ABCE /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		BC7F425837CDAA49E5A15EC1 /* Pods_Nutrition_AnalysisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nutrition_AnalysisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D2FE1D04FD21F58B39449E25 /* Pods-Nutrition Analysis.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition Analysis.debug.xcconfig"; path = "Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,7 +107,6 @@
 				1222772EB85BC38206398D58 /* Pods-Nutrition AnalysisTests.debug.xcconfig */,
 				9688B3F33A3D6CAD4590B853 /* Pods-Nutrition AnalysisTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,12 +135,11 @@
 		A08FA01426B6CA7700C99E7C /* Nutrition Analysis */ = {
 			isa = PBXGroup;
 			children = (
+				A08FA05826B8764900C99E7C /* Helpers */,
 				A08FA04826B6E50200C99E7C /* Scenes */,
 				A08FA04726B6DDAE00C99E7C /* Network */,
 				A08FA04626B6DD7800C99E7C /* Models */,
 				A08FA04526B6CFA800C99E7C /* Supporting Files */,
-				A08FA01926B6CA7700C99E7C /* ViewController.swift */,
-				A08FA01B26B6CA7700C99E7C /* Main.storyboard */,
 				A08FA02026B6CA7800C99E7C /* LaunchScreen.storyboard */,
 			);
 			path = "Nutrition Analysis";
@@ -187,8 +191,44 @@
 		A08FA04826B6E50200C99E7C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				A090923426BAB08E0020ABCE /* Shared */,
+				A08FA04926B81C4900C99E7C /* Analyze Ingredients */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		A08FA04926B81C4900C99E7C /* Analyze Ingredients */ = {
+			isa = PBXGroup;
+			children = (
+				A08FA05326B81E4900C99E7C /* AnalyzeIngredientsVC.xib */,
+				A08FA05226B81E4900C99E7C /* AnalyzeIngredientsVC.swift */,
+				A08FA05626B833CF00C99E7C /* AnalyzeIngredientsViewModel.swift */,
+			);
+			path = "Analyze Ingredients";
+			sourceTree = "<group>";
+		};
+		A08FA05826B8764900C99E7C /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A08FA05926B8767500C99E7C /* Custom Views */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A08FA05926B8767500C99E7C /* Custom Views */ = {
+			isa = PBXGroup;
+			children = (
+				A08FA05A26B876D800C99E7C /* CustomTextView.swift */,
+			);
+			path = "Custom Views";
+			sourceTree = "<group>";
+		};
+		A090923426BAB08E0020ABCE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				A090923526BAB0DE0020ABCE /* AppCoordinator.swift */,
+			);
+			path = Shared;
 			sourceTree = "<group>";
 		};
 		D8C80C990CB55FEE11BB8D3F /* Frameworks */ = {
@@ -212,6 +252,7 @@
 				A08FA00E26B6CA7700C99E7C /* Sources */,
 				A08FA00F26B6CA7700C99E7C /* Frameworks */,
 				A08FA01026B6CA7700C99E7C /* Resources */,
+				3273A468716345786DD954AD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -249,6 +290,7 @@
 				A08FA02F26B6CA7900C99E7C /* Sources */,
 				A08FA03026B6CA7900C99E7C /* Frameworks */,
 				A08FA03126B6CA7900C99E7C /* Resources */,
+				7FE3DB839C5956376C5CDEAF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,8 +350,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A08FA02226B6CA7800C99E7C /* LaunchScreen.storyboard in Resources */,
+				A08FA05526B81E4900C99E7C /* AnalyzeIngredientsVC.xib in Resources */,
 				A08FA01F26B6CA7800C99E7C /* Assets.xcassets in Resources */,
-				A08FA01D26B6CA7700C99E7C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,6 +372,40 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		3273A468716345786DD954AD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nutrition Analysis/Pods-Nutrition Analysis-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7FE3DB839C5956376C5CDEAF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrition Analysis-Nutrition AnalysisUITests/Pods-Nutrition Analysis-Nutrition AnalysisUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Nutrition Analysis-Nutrition AnalysisUITests/Pods-Nutrition Analysis-Nutrition AnalysisUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nutrition Analysis-Nutrition AnalysisUITests/Pods-Nutrition Analysis-Nutrition AnalysisUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C01298F41D9419B4982FF453 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -403,8 +479,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A08FA01A26B6CA7700C99E7C /* ViewController.swift in Sources */,
+				A090923626BAB0DE0020ABCE /* AppCoordinator.swift in Sources */,
+				A08FA05726B833CF00C99E7C /* AnalyzeIngredientsViewModel.swift in Sources */,
+				A08FA05B26B876D800C99E7C /* CustomTextView.swift in Sources */,
 				A08FA01626B6CA7700C99E7C /* AppDelegate.swift in Sources */,
+				A08FA05426B81E4900C99E7C /* AnalyzeIngredientsVC.swift in Sources */,
 				A08FA01826B6CA7700C99E7C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -441,14 +520,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		A08FA01B26B6CA7700C99E7C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A08FA01C26B6CA7700C99E7C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A08FA02026B6CA7800C99E7C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
