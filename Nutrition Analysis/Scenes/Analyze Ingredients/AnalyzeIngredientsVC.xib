@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AnalyzeIngredientsVC" customModule="Nutrition_Analysis" customModuleProvider="target">
+            <connections>
+                <outlet property="analyzeButton" destination="U7y-e5-eXv" id="KhQ-LD-xlZ"/>
+                <outlet property="ingredientsTextView" destination="pmD-Pr-zzp" id="fQ1-Ea-fPY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pmD-Pr-zzp" customClass="CustomTextView" customModule="Nutrition_Analysis" customModuleProvider="target">
+                    <rect key="frame" x="12" y="68" width="390" height="701"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <color key="textColor" systemColor="labelColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" systemColor="labelColor"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </textView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U7y-e5-eXv">
+                    <rect key="frame" x="147" y="793" width="120" height="45"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="AdL-Af-f6G"/>
+                        <constraint firstAttribute="width" constant="120" id="nZ2-Qv-WBp"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                    <state key="normal" title="Analyze">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="analyzeButtonPressed:" destination="-1" eventType="touchUpInside" id="SWV-ow-pPG"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="U7y-e5-eXv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="0P6-94-b9c"/>
+                <constraint firstItem="pmD-Pr-zzp" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="24" id="4G3-7i-Z1l"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="pmD-Pr-zzp" secondAttribute="trailing" constant="12" id="H5r-JM-aLo"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="U7y-e5-eXv" secondAttribute="bottom" constant="24" id="OBh-UR-SDf"/>
+                <constraint firstItem="pmD-Pr-zzp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="12" id="m33-AG-tRb"/>
+                <constraint firstItem="U7y-e5-eXv" firstAttribute="top" secondItem="pmD-Pr-zzp" secondAttribute="bottom" constant="24" id="xNC-R7-Nov"/>
+            </constraints>
+            <point key="canvasLocation" x="131.8840579710145" y="129.91071428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
