@@ -42,9 +42,12 @@ class AnalyzeIngredientsVC: UIViewController {
     
     private func bindTextView() {
         ingredientsTextView.rx.text.orEmpty.bind(to: viewModel.text).disposed(by: disposeBag)
-        viewModel.resultText.asObservable().subscribe(onNext: { resultText in
-            // navigate to next view with result text
+        viewModel.resultText.asObservable().subscribe(onNext: { [weak self] resultText in
+            if resultText.isEmpty { return }
+            let ingredientsSummaryVC = IngredientsSummaryVC(viewModel: IngredientsSummaryViewModel(ingredients: resultText))
+            self?.navigationController?.pushViewController(ingredientsSummaryVC, animated: true)
             debugPrint(resultText)
+            
         }).disposed(by: disposeBag)
     }
     
