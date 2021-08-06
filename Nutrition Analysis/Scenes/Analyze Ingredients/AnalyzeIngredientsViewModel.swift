@@ -28,5 +28,4 @@ class AnalyzeIngredientsViewModel {
         let resultText = text.value.components(separatedBy: "\n")
         self.resultText.accept(resultText)
     }
-
 }
