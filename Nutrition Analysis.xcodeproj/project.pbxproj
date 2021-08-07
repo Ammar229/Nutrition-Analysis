@@ -9,11 +9,16 @@
 /* Begin PBXBuildFile section */
 		A078C1F126BD6E4E009B8901 /* ErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078C1F026BD6E4E009B8901 /* ErrorResponse.swift */; };
 		A078C1F326BD7603009B8901 /* SharedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078C1F226BD7603009B8901 /* SharedData.swift */; };
+		A078C1F726BD9696009B8901 /* TotalNutritionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078C1F526BD9696009B8901 /* TotalNutritionVC.swift */; };
+		A078C1F826BD9696009B8901 /* TotalNutritionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A078C1F626BD9696009B8901 /* TotalNutritionVC.xib */; };
+		A078C1FA26BDAC10009B8901 /* TotalNutritionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A078C1F926BDAC10009B8901 /* TotalNutritionViewModel.swift */; };
+		A08A986D26BF2CB40075E1AE /* MockedIngredientsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A986C26BF2CB40075E1AE /* MockedIngredientsManager.swift */; };
+		A08A986F26BF308B0075E1AE /* AnalyzeIngredientsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A986E26BF308B0075E1AE /* AnalyzeIngredientsViewModelTests.swift */; };
+		A08A987126BF45C50075E1AE /* Stubs.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08A987026BF45C50075E1AE /* Stubs.swift */; };
 		A08FA01626B6CA7700C99E7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA01526B6CA7700C99E7C /* AppDelegate.swift */; };
 		A08FA01826B6CA7700C99E7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA01726B6CA7700C99E7C /* SceneDelegate.swift */; };
 		A08FA01F26B6CA7800C99E7C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A08FA01E26B6CA7800C99E7C /* Assets.xcassets */; };
 		A08FA02226B6CA7800C99E7C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A08FA02026B6CA7800C99E7C /* LaunchScreen.storyboard */; };
-		A08FA02D26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA02C26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift */; };
 		A08FA03826B6CA7900C99E7C /* Nutrition_AnalysisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA03726B6CA7900C99E7C /* Nutrition_AnalysisUITests.swift */; };
 		A08FA05426B81E4900C99E7C /* AnalyzeIngredientsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08FA05226B81E4900C99E7C /* AnalyzeIngredientsVC.swift */; };
 		A08FA05526B81E4900C99E7C /* AnalyzeIngredientsVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = A08FA05326B81E4900C99E7C /* AnalyzeIngredientsVC.xib */; };
@@ -64,6 +69,12 @@
 		9688B3F33A3D6CAD4590B853 /* Pods-Nutrition AnalysisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nutrition AnalysisTests.release.xcconfig"; path = "Target Support Files/Pods-Nutrition AnalysisTests/Pods-Nutrition AnalysisTests.release.xcconfig"; sourceTree = "<group>"; };
 		A078C1F026BD6E4E009B8901 /* ErrorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponse.swift; sourceTree = "<group>"; };
 		A078C1F226BD7603009B8901 /* SharedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedData.swift; sourceTree = "<group>"; };
+		A078C1F526BD9696009B8901 /* TotalNutritionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalNutritionVC.swift; sourceTree = "<group>"; };
+		A078C1F626BD9696009B8901 /* TotalNutritionVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotalNutritionVC.xib; sourceTree = "<group>"; };
+		A078C1F926BDAC10009B8901 /* TotalNutritionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalNutritionViewModel.swift; sourceTree = "<group>"; };
+		A08A986C26BF2CB40075E1AE /* MockedIngredientsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockedIngredientsManager.swift; sourceTree = "<group>"; };
+		A08A986E26BF308B0075E1AE /* AnalyzeIngredientsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyzeIngredientsViewModelTests.swift; sourceTree = "<group>"; };
+		A08A987026BF45C50075E1AE /* Stubs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stubs.swift; sourceTree = "<group>"; };
 		A08FA01226B6CA7700C99E7C /* Nutrition Analysis.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nutrition Analysis.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08FA01526B6CA7700C99E7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A08FA01726B6CA7700C99E7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -71,7 +82,6 @@
 		A08FA02126B6CA7800C99E7C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A08FA02326B6CA7800C99E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08FA02826B6CA7800C99E7C /* Nutrition AnalysisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrition AnalysisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A08FA02C26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition_AnalysisTests.swift; sourceTree = "<group>"; };
 		A08FA02E26B6CA7900C99E7C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A08FA03326B6CA7900C99E7C /* Nutrition AnalysisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nutrition AnalysisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A08FA03726B6CA7900C99E7C /* Nutrition_AnalysisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nutrition_AnalysisUITests.swift; sourceTree = "<group>"; };
@@ -138,6 +148,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		A078C1F426BD965A009B8901 /* Total Nutrition  */ = {
+			isa = PBXGroup;
+			children = (
+				A078C1F526BD9696009B8901 /* TotalNutritionVC.swift */,
+				A078C1F626BD9696009B8901 /* TotalNutritionVC.xib */,
+				A078C1F926BDAC10009B8901 /* TotalNutritionViewModel.swift */,
+			);
+			path = "Total Nutrition ";
+			sourceTree = "<group>";
+		};
 		A08FA00926B6CA7700C99E7C = {
 			isa = PBXGroup;
 			children = (
@@ -176,8 +196,10 @@
 		A08FA02B26B6CA7900C99E7C /* Nutrition AnalysisTests */ = {
 			isa = PBXGroup;
 			children = (
-				A08FA02C26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift */,
 				A08FA02E26B6CA7900C99E7C /* Info.plist */,
+				A08A986C26BF2CB40075E1AE /* MockedIngredientsManager.swift */,
+				A08A986E26BF308B0075E1AE /* AnalyzeIngredientsViewModelTests.swift */,
+				A08A987026BF45C50075E1AE /* Stubs.swift */,
 			);
 			path = "Nutrition AnalysisTests";
 			sourceTree = "<group>";
@@ -226,6 +248,7 @@
 			isa = PBXGroup;
 			children = (
 				A090923426BAB08E0020ABCE /* Shared */,
+				A078C1F426BD965A009B8901 /* Total Nutrition  */,
 				A090923726BABF5C0020ABCE /* Ingredient Summary */,
 				A08FA04926B81C4900C99E7C /* Analyze Ingredients */,
 			);
@@ -406,6 +429,7 @@
 					};
 					A08FA02726B6CA7800C99E7C = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 						TestTargetID = A08FA01126B6CA7700C99E7C;
 					};
 					A08FA03226B6CA7900C99E7C = {
@@ -443,6 +467,7 @@
 				A08FA05526B81E4900C99E7C /* AnalyzeIngredientsVC.xib in Resources */,
 				A090925826BB5F2B0020ABCE /* IngredientsSummaryVC.xib in Resources */,
 				A090924C26BB2DE10020ABCE /* IngredientDetailsCell.xib in Resources */,
+				A078C1F826BD9696009B8901 /* TotalNutritionVC.xib in Resources */,
 				A08FA01F26B6CA7800C99E7C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +600,7 @@
 				A090925126BB2F9F0020ABCE /* UIView+ReusableIdentifier.swift in Sources */,
 				A090925726BB5F2B0020ABCE /* IngredientsSummaryVC.swift in Sources */,
 				A090923626BAB0DE0020ABCE /* AppCoordinator.swift in Sources */,
+				A078C1FA26BDAC10009B8901 /* TotalNutritionViewModel.swift in Sources */,
 				A08FA05726B833CF00C99E7C /* AnalyzeIngredientsViewModel.swift in Sources */,
 				A090924726BAF0240020ABCE /* HandleNetworkManager.swift in Sources */,
 				A090925A26BC28700020ABCE /* DataState.swift in Sources */,
@@ -588,6 +614,7 @@
 				A090924526BAE7760020ABCE /* IngredientDetails.swift in Sources */,
 				A08FA05426B81E4900C99E7C /* AnalyzeIngredientsVC.swift in Sources */,
 				A08FA01826B6CA7700C99E7C /* SceneDelegate.swift in Sources */,
+				A078C1F726BD9696009B8901 /* TotalNutritionVC.swift in Sources */,
 				A090925426BB478B0020ABCE /* Loadable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -596,7 +623,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A08FA02D26B6CA7900C99E7C /* Nutrition_AnalysisTests.swift in Sources */,
+				A08A987126BF45C50075E1AE /* Stubs.swift in Sources */,
+				A08A986F26BF308B0075E1AE /* AnalyzeIngredientsViewModelTests.swift in Sources */,
+				A08A986D26BF2CB40075E1AE /* MockedIngredientsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -795,6 +824,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Nutrition AnalysisTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
@@ -805,6 +835,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.ammar.NutritionAnalysis.Nutrition-AnalysisTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Nutrition Analysis.app/Nutrition Analysis";
@@ -817,6 +848,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "Nutrition AnalysisTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.5;

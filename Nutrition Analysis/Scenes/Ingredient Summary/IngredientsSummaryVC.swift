@@ -23,7 +23,6 @@ class IngredientsSummaryVC: UIViewController, Loadable {
 
     // MARK: - Outlets
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var totalNutritionButton: UIButton!
     
     
@@ -36,7 +35,6 @@ class IngredientsSummaryVC: UIViewController, Loadable {
         super.viewDidLoad()
         self.configureViews()
         self.bindVM()
-        self.viewModel.getIngredientsDetials()
     }
     
     
@@ -46,30 +44,12 @@ class IngredientsSummaryVC: UIViewController, Loadable {
         tableView.register(UINib(nibName: IngredientDetailsCell.identifier, bundle: nil), forCellReuseIdentifier: IngredientDetailsCell.identifier)
     }
     
-    
     // MARK: - Bind Function
     private func bindVM() {
-        bindLoadingStatus()
         bindIngredientsDetails()
         bindButton()
     }
     
-    private func bindLoadingStatus() {
-        viewModel.loadingStatus.asObservable().subscribe(onNext: { [weak self] dataState in
-            guard let self = self else { return }
-            switch dataState {
-            case .loading:
-                self.startLoading(activityIndicator: self.activityIndicator)
-            case .populated:
-                self.stopLoading(activityIndicator: self.activityIndicator)
-            case .error(let message):
-                self.stopLoading(activityIndicator: self.activityIndicator)
-                self.presentAlert(message: message)
-            case .empty:
-                break
-            }
-        }).disposed(by: disposeBag)
-    }
     
     
     private func bindIngredientsDetails() {
@@ -87,6 +67,8 @@ class IngredientsSummaryVC: UIViewController, Loadable {
                 // configure Ingredient Details cell
                 cell.ingredientDetails = ingredientDetails
                 
+                cell.name = "Food Name"
+                
         }.disposed(by: disposeBag)
         tableView.tableFooterView = UIView()
     }
@@ -97,15 +79,10 @@ class IngredientsSummaryVC: UIViewController, Loadable {
     }
     
     
-    
-    private func presentAlert(message: String) {
-        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-        present(alertController, animated: true)
-    }
-    
+    // MARK: - IBActions
     @IBAction func totalNutritionPressed(_ sender: UIButton) {
-        debugPrint("test")
+        let ingredientsSummaryVC = TotalNutritionVC(viewModel: TotalNutritionViewModel(ingredients:viewModel.getIng))
+        self.navigationController?.pushViewController(ingredientsSummaryVC, animated: true)
     }
 }
 

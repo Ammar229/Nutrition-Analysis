@@ -26,10 +26,18 @@ class IngredientDetailsCell: UITableViewCell {
                 return
             }
             totalWeightLabel.text = "\(ingredientDetails.totalWeight)"
-            unitLabel.text = "\(ingredientDetails.totalNutrients.fasat.unit)"
+            unitLabel.text = "\(ingredientDetails.totalNutrients.fat.unit)"
             caloriesLabel.text = "\(ingredientDetails.calories)"
-            quantityLabel.text = "\(ingredientDetails.totalNutrients.fasat.quantity)"
+            quantityLabel.text = "\(ingredientDetails.totalNutrients.enercKcal.quantity)"
         }
     }
     
+    var name: String? {
+        didSet {
+            guard let name = name else {
+                return
+            }
+            foodNameLabel.text = name
+        }
+    }
 }

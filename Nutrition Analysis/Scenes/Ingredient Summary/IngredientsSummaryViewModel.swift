@@ -12,13 +12,13 @@ import RxRelay
 class IngredientsSummaryViewModel {
     
     // MARK: - Initialization
-    init(ingredients: [String]) {
+    init(ingredients: [String], ingredientsDetails: [IngredientDetails]) {
         self.ingredients = ingredients
+        self.ingredientsDetails.accept(ingredientsDetails)
     }
     
     // MARK: - Variables
-    private var ingredientsManager: IngredientsManager = IngredientsNetworkManager()
-    private var ingredients :[String]
+    private var ingredients: [String]
     var ingredientsDetails: BehaviorRelay<[IngredientDetails]> = .init(value: [])
     var loadingStatus: BehaviorRelay<DataState> = .init(value: .empty)
     // create observable
@@ -29,28 +29,7 @@ class IngredientsSummaryViewModel {
         return ingredientsDetails.map{ $0.isEmpty ? .lightGray : .blue }
     }
     
-    
-   
-    // MARK: - API Functions
-    func getIngredientsDetials() {
-        self.loadingStatus.accept(.loading)
-        let group = DispatchGroup()
-        var ingredientsDetails: [IngredientDetails] = []
-        for ingredient in ingredients {
-            group.enter()
-            ingredientsManager.getAnalysis(for: ingredient) { result in
-                switch result {
-                case .success(let ingredientDetails):
-                    ingredientsDetails.append(ingredientDetails)
-                case .failure(let error):
-                    self.loadingStatus.accept(.error(error.localizedDescription))
-                }
-                group.leave()
-            }
-        }
-        group.notify(queue: .main) {
-            self.ingredientsDetails.accept(ingredientsDetails)
-            self.loadingStatus.accept(.populated)
-        }
+    var getIng: [String] {
+        return ingredients
     }
 }

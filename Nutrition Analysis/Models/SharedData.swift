@@ -12,6 +12,7 @@ class SharedData {
     static let shared = SharedData()
     let appkey = "d5d155a4977368490c2d14a58e1fa996"
     let appID = "111574a2"
+    let meal = "meal"
 }
 
 

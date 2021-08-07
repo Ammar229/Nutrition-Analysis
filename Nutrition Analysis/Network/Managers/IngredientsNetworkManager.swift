@@ -10,11 +10,12 @@ import Moya
 
 protocol IngredientsManager {
     func getAnalysis(for oneIngredient: String, completion: @escaping (Result<IngredientDetails, Error>) -> Void)
+    func getFullRecipeAnalysis(for ingredients: [String], completion: @escaping (Result<IngredientDetails, Error>) -> Void)
 }
 
 
 class IngredientsNetworkManager: IngredientsManager, HandleNetworkManager {
-    
+
     private var moyaProvider: MoyaProvider<IngredientsService>
     init(_ moyaProvider: MoyaProvider<IngredientsService> = MoyaProvider<IngredientsService>()) {
         self.moyaProvider = moyaProvider
@@ -23,6 +24,13 @@ class IngredientsNetworkManager: IngredientsManager, HandleNetworkManager {
     
     func getAnalysis(for oneIngredient: String, completion: @escaping (Result<IngredientDetails, Error>) -> Void) {
         moyaProvider.request(.getAnalysis(oneIngredient: oneIngredient)) { [weak self] result in
+            self?.handleNetworkResponse(result: result, completion: completion)
+        }
+    }
+    
+    
+    func getFullRecipeAnalysis(for ingredients: [String], completion: @escaping (Result<IngredientDetails, Error>) -> Void) {
+        moyaProvider.request(.getFullRecipeAnalysis(ingredients: ingredients)) { [weak self] result in
             self?.handleNetworkResponse(result: result, completion: completion)
         }
     }

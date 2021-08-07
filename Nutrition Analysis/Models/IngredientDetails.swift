@@ -12,16 +12,28 @@ import Foundation
 struct IngredientDetails: Codable {
     let uri: String
     let calories, totalWeight: Int
-    let totalNutrients: TotalNutrients
+    let totalNutrients, totalDaily: TotalNutrients
 }
 
 // MARK: - TotalNutrients
 struct TotalNutrients: Codable {
-    let enercKcal, fasat: Details
-
+    
+    let enercKcal, fat, carbs, fiber: Details
+    let protein, cholesterol, na, ca: Details
+    let k, fe, vitc: Details
+    
     enum CodingKeys: String, CodingKey {
         case enercKcal = "ENERC_KCAL"
-        case fasat = "FASAT"
+        case fat = "FAT"
+        case carbs = "CHOCDF"
+        case fiber = "FIBTG"
+        case protein = "PROCNT"
+        case cholesterol = "CHOLE"
+        case na = "NA"
+        case ca = "CA"
+        case k = "K"
+        case fe = "FE"
+        case vitc = "VITC"
     }
 }
 
