@@ -21,7 +21,7 @@ class AppCoordinator {
     
     // MARK: - Functions
     func start() {
-        window.rootViewController = UINavigationController(rootViewController: AnalyzeIngredientsVC())
+        window.rootViewController = UINavigationController(rootViewController: AnalyzeIngredientsVC(viewModel: AnalyzeIngredientsViewModel()))
         window.makeKeyAndVisible()
     }
     

@@ -10,6 +10,7 @@ import Moya
 
 enum IngredientsService {
     case getAnalysis(oneIngredient: String)
+    case getFullRecipeAnalysis(ingredients: [String])
 }
 
 
@@ -19,11 +20,21 @@ extension IngredientsService: TargetType {
     }
     
     var path: String {
-        return "/api/nutrition-data"
+        switch self {
+        case .getAnalysis:
+            return "/api/nutrition-data"
+        case .getFullRecipeAnalysis:
+            return "/api/nutrition-details"
+        }
     }
     
     var method: Moya.Method {
-        return .get
+        switch self {
+        case .getAnalysis:
+            return .get
+        case .getFullRecipeAnalysis:
+            return .post
+        }
     }
     
     var sampleData: Data {
@@ -33,10 +44,15 @@ extension IngredientsService: TargetType {
     var task: Task {
         switch self {
         case .getAnalysis(let ingredient):
-            let params: [String: Any]
-            params = ["app_id": SharedData.shared.appID,
-                      "app_key": SharedData.shared.appkey, "ingr" : ingredient] as [String : Any]
+            let params: [String: Any] = ["app_id": SharedData.shared.appID,
+                      "app_key": SharedData.shared.appkey, "ingr" : ingredient, "nutrition-type": "cooking"]
             return .requestParameters(parameters: params, encoding: URLEncoding.queryString)
+        case .getFullRecipeAnalysis(ingredients: let ingredients):
+            let urlParameters: [String: Any] = ["app_id": SharedData.shared.appID,
+                                                "app_key": SharedData.shared.appkey]
+            let bodyParameters: [String: Any] = ["title": SharedData.shared.meal,
+                                                 "ingr": ingredients]
+            return .requestCompositeParameters(bodyParameters: bodyParameters, bodyEncoding: JSONEncoding.default, urlParameters: urlParameters)
         }
 
     }

@@ -6,21 +6,21 @@
 //
 
 import UIKit
+import MBProgressHUD
 
 protocol Loadable {
     // Loading indicator
-    func startLoading(activityIndicator: UIActivityIndicatorView)
-    func stopLoading(activityIndicator: UIActivityIndicatorView)
+    func startLoading()
+    func stopLoading()
 }
 
 extension Loadable where Self: UIViewController {
     // Loading indicator
-    func startLoading(activityIndicator: UIActivityIndicatorView) {
-        activityIndicator.startAnimating()
+    func startLoading() {
+        MBProgressHUD.showAdded(to: view, animated: true)
     }
     
-    func stopLoading(activityIndicator: UIActivityIndicatorView) {
-        activityIndicator.stopAnimating()
-        activityIndicator.isHidden = true
+    func stopLoading() {
+        MBProgressHUD.hide(for: view, animated: true)
     }
 }
